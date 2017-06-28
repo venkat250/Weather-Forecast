@@ -1,4 +1,4 @@
-/*jslint browser:true */
+
 'use strict';
 
 var weatherConditions = new XMLHttpRequest();
