@@ -17,11 +17,11 @@ var showPosition = function(position) {
   lati =  position.coords.latitude;
    long= position.coords.longitude;
    
-    weatherConditions.open('GET', 'http://api.wunderground.com/api/767c04bafb2d3bcb/conditions/q/'+lati+','+long+'.json', true);
+    weatherConditions.open('GET', 'http://api.wunderground.com/api/*API-KEY*/conditions/q/'+lati+','+long+'.json', true);
            weatherConditions.responseType = 'text';
            weatherConditions.send(null);
 
-            weatherForecast.open('GET','http://api.wunderground.com/api/767c04bafb2d3bcb/forecast/q/'+lati+','+long+'.json', true);
+            weatherForecast.open('GET','http://api.wunderground.com/api/*API-KEY*/forecast/q/'+lati+','+long+'.json', true);
             weatherForecast.responseType = 'text'; 
             weatherForecast.send(); 
  
@@ -35,11 +35,11 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 if(this.long === undefined && this.lati === undefined){
 
-     weatherConditions.open('GET', 'http://api.wunderground.com/api/767c04bafb2d3bcb/conditions/q/CA/San_Francisco.json', true);
+     weatherConditions.open('GET', 'http://api.wunderground.com/api/*API-KEY*/conditions/q/CA/San_Francisco.json', true);
            weatherConditions.responseType = 'text';
            weatherConditions.send(null);
 
-            weatherForecast.open('GET','http://api.wunderground.com/api/767c04bafb2d3bcb/forecast/q/CA/San_Francisco.json', true);
+            weatherForecast.open('GET','http://api.wunderground.com/api/*API-KEY*/forecast/q/CA/San_Francisco.json', true);
             weatherForecast.responseType = 'text'; 
             weatherForecast.send(); 
     
@@ -48,11 +48,11 @@ if(this.long === undefined && this.lati === undefined){
 function loadweather(){
          var zipcode = document.getElementById('zip').value;
 
-           weatherConditions.open('GET', 'http://api.wunderground.com/api/767c04bafb2d3bcb/conditions/q/'+zipcode+'.json', true);
+           weatherConditions.open('GET', 'http://api.wunderground.com/api/*API-KEY*/conditions/q/'+zipcode+'.json', true);
            weatherConditions.responseType = 'text';
            weatherConditions.send(null);
 
-            weatherForecast.open('GET','http://api.wunderground.com/api/767c04bafb2d3bcb/forecast/q/'+zipcode+'.json', true);
+            weatherForecast.open('GET','http://api.wunderground.com/api/*API-KEY*/forecast/q/'+zipcode+'.json', true);
             weatherForecast.responseType = 'text'; 
             weatherForecast.send(); 
 
